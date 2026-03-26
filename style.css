@@ -120,7 +120,7 @@ textarea {
 /* Picture Box */
 .picture-box {
     height: auto;
-    min-height: 320px;
+    min-height: 475px;
     aspect-ratio: 4 / 3;
     background: #111;
 }
