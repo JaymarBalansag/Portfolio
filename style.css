@@ -1,0 +1,20 @@
+main {
+    height: 120vh;
+}
+
+/* Picture Box */
+.picture-box {
+    height: 70%;
+}
+
+.picture-box .picture {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    padding: 0px;
+}   
+
+/* Description Box */
+.description-box {
+    height: 30%;
+}
