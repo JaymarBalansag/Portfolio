@@ -5,38 +5,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <main class="container-fluid p-5 bg-black">
+    <main class="container-fluid page-shell">
 
-        <div class="row">
+        <div class="row main-row g-3">
 
-            <div class="col-4 ">
-                <div class="row bg-primary picture-box">
-                    <img src="assets/pic.jpg" alt="" class="img-fluid picture">
+            <div class="col-12 col-lg-3 left-column">
+                <div class="row picture-box card-box">
+                    <img src="assets/pic.jpg" alt="Portrait photo" class="img-fluid picture">
                 </div>
-                <div class="row bg-warning">
-                    description
+                <div class="row description-box card-box">
+                    <div class="card-inner">
+                        <p class="intro-kicker">Full-Stack</p>
+                        <h1 class="intro-title">Developer</h1>
+
+                        <div class="meta-list">
+                            <p><span>Status:</span> Open for Work</p>
+                            <p><span>Experience:</span> OJT @ Local Gov</p>
+                            <p><span>Focus:</span> Web & Troubleshooting</p>
+                            <p><span>Location:</span> Albuera, Leyte, Philippines</p>
+                        </div>
+
+                        <div class="what-i-do">
+                            <p class="section-label">What I do:</p>
+                            <ul>
+                                <li>Web Development (Laravel/Vue)</li>
+                                <li>Network Configuration</li>
+                                <li>IT Support (Help Support)</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="row bg-primary">
-                    contacts
+                <div class="row contacts-box card-box">
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-8">
-
-                <div class="row">
-                    <div class="col-6 bg-success">tech stock</div>
-                    <div class="col-6 bg-info">kiss</div>
+            <div class="col-12 col-lg-9 right-column">
+                <div class="row tech-kiss-row g-3">
+                    <div class="col-12 col-md-6">
+                        <div class="card-box tech-box">
+                            <div class="card-inner">
+                                <h2 class="panel-title text-center">Tech-Stock</h2>
+                                <div class="tech-icons">
+                                    <img src="assets/laravel-brands-solid.svg" alt="Laravel">
+                                    <img src="assets/vuejs-brands-solid-full.svg" alt="Vue.js">
+                                    <img src="assets/bootstrap-brands-solid-full.svg" alt="Bootstrap">
+                                    <img src="assets/git-alt-brands-solid-full.svg" alt="Git">
+                                    <img src="assets/github-brands-solid-full.svg" alt="GitHub">
+                                    <img src="assets/html5-brands-solid-full.svg" alt="HTML5">
+                                    <img src="assets/css3-alt-brands-solid-full.svg" alt="CSS3">
+                                    <img src="assets/database-solid-full.svg" alt="MySQL">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card-box project-box kiss-panel">
+                            <div class="project-header">
+                                <div>
+                                    <h2 class="panel-title">MCRO-KISS</h2>
+                                    <p>Management and Online Application</p>
+                                </div>
+                                <span class="project-tag">Civic Platform</span>
+                            </div>
+                            <div class="project-image-wrap rentahub-box">
+                                <img src="assets/kiss.jfif" alt="MCRO-KISS preview" class="img-fluid rentahub">
+                                <div class="project-hover-layer">
+                                    <a href="#" class="project-hover-cta">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-8 bg-info">Rentahub</div>
-                    <div class="col-4 bg-success">message me</div>
+                <div class="row rent-message-row g-3">
+                    <div class="col-12 col-md-8">
+                        <div class="card-box project-box rent-panel">
+                            <div class="project-image-wrap rentahub-box">
+                                <img src="assets/rentahub.jfif" alt="Rentahub preview" class="img-fluid rentahub">
+                                <div class="project-hover-layer">
+                                    <a href="#" class="project-hover-cta">View More</a>
+                                </div>
+                            </div>
+                            <div class="rent-footer">
+                                <h2 class="panel-title">Rentahub</h2>
+                                <p>SaaS for finding a rental properties</p>
+                                <span class="project-tag">Rental SaaS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card-box message-box">
+                            <div class="card-inner">
+                                <h2 class="panel-title">Message me Directly!</h2>
+                                <form action="#" method="post" class="contact-form">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" autocomplete="email">
+
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="6"></textarea>
+
+                                    <button type="submit" class="submit-btn">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
