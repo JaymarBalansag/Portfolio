@@ -162,14 +162,28 @@
                         <div class="card-box message-box">
                             <div class="card-inner">
                                 <h2 class="panel-title">Message me Directly!</h2>
-                                <form action="#" method="post" class="contact-form">
+                                <p class="contact-intro">Open to projects, collaborations, and IT support work.</p>
+                                <form class="contact-form"
+                                    data-endpoint="https://script.google.com/macros/s/AKfycbw0mDqUxQhXGLxRiHET-02-m6UpFHMbywnReuQ-seuEkFhY-34yI4U-B1RVVT9WvriNcg/exec"
+                                    novalidate>
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" autocomplete="name" maxlength="80"
+                                        required>
+
                                     <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" autocomplete="email">
+                                    <input type="email" id="email" name="email" autocomplete="email" maxlength="120"
+                                        required>
 
                                     <label for="message">Message</label>
-                                    <textarea id="message" name="message" rows="6"></textarea>
+                                    <textarea id="message" name="message" rows="6" maxlength="1200" required></textarea>
+
+                                    <div class="hp-field" aria-hidden="true">
+                                        <label for="website">Website</label>
+                                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                                    </div>
 
                                     <button type="submit" class="submit-btn">Submit</button>
+                                    <p class="form-status" role="status" aria-live="polite"></p>
                                 </form>
                             </div>
                         </div>
@@ -184,6 +198,7 @@
     </main>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

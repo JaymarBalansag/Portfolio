@@ -24,7 +24,7 @@
 }
 
 body {
-    min-height: 100vh;
+    min-height: 150vh;
     background:
         radial-gradient(circle at top left, rgba(34, 201, 151, 0.08), transparent 30%),
         radial-gradient(circle at bottom right, rgba(138, 92, 240, 0.1), transparent 28%),
@@ -605,7 +605,16 @@ textarea {
 
 .message-box .panel-title {
     font-size: clamp(1.4rem, 2.4vw, 1.95rem);
-    margin-bottom: 1rem;
+    margin-bottom: 0.45rem;
+}
+
+.contact-intro {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0.9rem;
+    font-size: 0.8rem;
+    line-height: 1.35;
+    opacity: 0.82;
 }
 
 .contact-form {
@@ -631,6 +640,12 @@ textarea {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32);
 }
 
+.contact-form input.is-invalid,
+.contact-form textarea.is-invalid {
+    border-color: #b71c1c;
+    box-shadow: 0 0 0 3px rgba(183, 28, 28, 0.14);
+}
+
 .contact-form textarea {
     min-height: 8.5rem;
     resize: vertical;
@@ -645,6 +660,39 @@ textarea {
 .submit-btn {
     justify-self: start;
     margin-top: 0.15rem;
+}
+
+.submit-btn:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-status {
+    min-height: 1.2rem;
+    margin: 0.1rem 0 0;
+    font-size: 0.76rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.form-status.is-success {
+    color: #0d4f39;
+}
+
+.form-status.is-error {
+    color: #8f1414;
+}
+
+.form-status.is-loading {
+    color: rgba(12, 12, 12, 0.78);
 }
 
 .project-box:hover,
