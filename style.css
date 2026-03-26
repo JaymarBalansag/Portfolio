@@ -533,30 +533,94 @@ textarea {
     transform: translateY(0) scale(1);
 }
 
-@media (max-width: 991.98px) {
-    .page-shell {
-        padding: var(--card-gap);
+@media (max-width: 1199.98px) {
+    .main-row {
+        display: flex;
+        flex-direction: column;
+        gap: var(--card-gap);
+        min-height: auto;
+        --bs-gutter-x: 0;
+        --bs-gutter-y: 0;
     }
 
-    .main-row {
-        min-height: auto;
+    .left-column,
+    .right-column,
+    .tech-kiss-row,
+    .rent-message-row {
+        display: contents;
+    }
+
+    .main-row > .row,
+    .main-row > [class*="col-"] {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .left-column > .row,
+    .tech-kiss-row > [class*="col-"],
+    .rent-message-row > [class*="col-"] {
+        width: 100%;
+        margin: 0 0 var(--card-gap);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .rent-message-row > [class*="col-"]:last-child {
+        margin-bottom: 0;
     }
 
     .picture-box,
     .description-box,
+    .contacts-box,
     .tech-box,
     .kiss-panel,
     .rent-panel,
     .message-box {
         min-height: unset;
+        height: auto;
     }
 
     .picture-box {
-        min-height: 360px;
+        min-height: 300px;
+        aspect-ratio: 16 / 11;
+    }
+
+    .description-box {
+        padding: 1rem 0.95rem;
+    }
+
+    .panel-title {
+        font-size: clamp(1.45rem, 3vw, 1.95rem);
+    }
+
+    .project-header,
+    .rent-footer,
+    .message-box {
+        padding: 0.9rem;
+    }
+
+    .tech-box {
+        padding: 0.9rem;
     }
 
     .project-image-wrap {
-        min-height: 260px;
+        min-height: 220px;
+    }
+
+    .message-box {
+        min-height: 0;
+    }
+
+    .contact-form textarea {
+        min-height: 7rem;
+    }
+
+    .card-box,
+    .project-box {
+        border-radius: 1.25rem;
     }
 }
 
@@ -565,13 +629,9 @@ textarea {
         --card-gap: 0.8rem;
     }
 
-    .page-shell {
-        padding: var(--card-gap);
-    }
-
-    .left-column,
-    .right-column {
-        gap: var(--card-gap);
+    .picture-box {
+        min-height: 240px;
+        aspect-ratio: auto;
     }
 
     .project-header {
@@ -582,24 +642,20 @@ textarea {
         align-self: flex-start;
     }
 
-    .picture-box {
-        min-height: 280px;
-    }
-
     .social-links a {
         min-height: 60px;
     }
 
     .project-image-wrap {
-        min-height: 220px;
+        min-height: 190px;
     }
 
     .description-box,
     .tech-box,
     .message-box,
     .rent-footer {
-        padding-left: 0.9rem;
-        padding-right: 0.9rem;
+        padding-left: 0.85rem;
+        padding-right: 0.85rem;
     }
 
     .card-box,
