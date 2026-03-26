@@ -188,6 +188,13 @@ a {
     gap: 0.55rem;
 }
 
+.hero-actions {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
 .hero-meta span,
 .section-index {
     display: inline-flex;
@@ -289,6 +296,7 @@ a {
     flex-wrap: wrap;
 }
 
+.hero-actions a,
 .close-actions a {
     display: inline-flex;
     align-items: center;
@@ -298,6 +306,36 @@ a {
     border-radius: 999px;
     border: 1px solid var(--line);
     background: rgba(255, 255, 255, 0.08);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.hero-actions a:hover,
+.hero-actions a:focus-visible,
+.close-actions a:hover,
+.close-actions a:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.34);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22);
+}
+
+.hero-actions a.is-primary,
+.close-actions a.is-primary {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(230, 230, 230, 0.88));
+    border-color: rgba(255, 255, 255, 0.7);
+    color: #0f0f0f;
+    font-weight: 700;
+}
+
+.hero-actions a.is-primary:hover,
+.hero-actions a.is-primary:focus-visible,
+.close-actions a.is-primary:hover,
+.close-actions a.is-primary:focus-visible {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(240, 240, 240, 0.94));
 }
 
 .theme-kiss .project-section {
@@ -356,6 +394,16 @@ a {
 
     .hero-visual {
         min-height: 300px;
+    }
+
+    .hero-actions,
+    .close-actions {
+        gap: 0.65rem;
+    }
+
+    .hero-actions a,
+    .close-actions a {
+        width: 100%;
     }
 
     .project-section {
