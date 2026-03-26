@@ -361,7 +361,7 @@ textarea {
 
 /* Rent Message Row */
 .rent-message-row {
-    min-height: 54%;
+    min-height: 60%;
 }
 
 .rentahub-box {
@@ -380,7 +380,7 @@ textarea {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.38));
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.38)); */
     transition: opacity 0.28s ease, background-color 0.28s ease;
     z-index: 1;
 }
@@ -454,7 +454,7 @@ textarea {
 }
 
 .message-box {
-    min-height: 390px;
+    min-height: 480px;
     background:
         radial-gradient(circle at top left, rgba(255, 255, 255, 0.16), transparent 28%),
         var(--teal);
